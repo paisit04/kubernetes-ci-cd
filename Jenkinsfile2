@@ -14,7 +14,7 @@ node {
 
     stage "Build"
 
-        def customImage = docker.build("${imageName}", "-f applications/hello-kenzan/Dockerfile")
+        def customImage = docker.build("${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan")
     
     stage "Push"
 
